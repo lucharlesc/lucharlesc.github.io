@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <style>
+            :root {
+                --bg-color-0: #FFFFFF;
+                --bg-color-1: #F2F2F2;
+                --fg-color-0: #333333;
+                --fg-color-1: #808080;
+                --i-bg-color: #333333;
+                --i-fg-color: #FFFFFF;
+                --hl-color: #0C68F4;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                background-color: var(--bg-color-1);
+            }
+            body {
+                margin: auto;
+                max-width: 1024px;
+                background-color: var(--bg-color-0);
+                font-family: monospace, sans-serif;
+                font-size: 16px;
+                line-height: 24px;
+                color: var(--fg-color-0);
+            }
+            main {
+                padding: 0 32px;
+                border-top: 2px solid var(--bg-color-1);
+            }
+            footer {
+                padding: 32px 32px 256px 32px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 24px;
+                background-color: var(--i-bg-color);
+            }
+            section {
+                padding: 32px 0;
+            }
+            hr {
+                border: none;
+                border-top: 2px solid var(--bg-color-1);
+            }
+            article {
+                margin-top: 32px;
+            }
+            h1 {
+                padding: 32px;
+                font-size: 48px;
+                line-height: 64px;
+            }
+            h2 {
+                font-size: 32px;
+                line-height: 48px;
+            }
+            h3 {
+                font-size: 24px;
+                line-height: 36px;
+            }
+            h4 {
+                font-size: 16px;
+                line-height: 24px;
+            }
+            h5 {
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 24px;
+                color: var(--fg-color-1);
+            }
+            a {
+                color: var(--hl-color);
+            }
+            .margin-top-32 {
+                margin-top: 32px;
+            }
+            .margin-top-8 {
+                margin-top: 8px;
+            }
+            .display-inline {
+                display: inline;
+            }
+            .color-i-fg-color {
+                color: var(--i-fg-color);
+            }
+            ::selection {
+                color: var(--i-fg-color);
+                background-color: var(--hl-color);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Charles C. Lu</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Experience</h2>
+                <article>
+                    <header>
+                        <h3 class="display-inline">Amazon</h3>
+                        <p class="display-inline"><a href="https://www.amazon.com/" target="_blank">amazon.com</a></p>
+                    </header>
+                    <div class="margin-top-32">
+                        <h4>Software Development Engineer II, Payments</h4>
+                        <h5>Seattle,&nbsp;WA&nbsp;• Jul&nbsp;2023&nbsp;- Present</h5>
+                        <h4>Software Development Engineer I, Payments</h4>
+                        <h5>Seattle,&nbsp;WA&nbsp;• Feb&nbsp;2022&nbsp;- Jun&nbsp;2023</h5>
+                        <p class="margin-top-8">Payment processing of $2+ billion per day with 200+ payment processors globally across all payments on <a href="https://www.amazon.com/" target="_blank">Amazon</a>, <a href="https://aws.amazon.com/" target="_blank">AWS</a>, <a href="https://www.twitch.tv/" target="_blank">Twitch</a>, at <a href="https://www.wholefoodsmarket.com/" target="_blank">Whole&nbsp;Foods</a>, and more.</p>
+                        <p class="margin-top-8">Media: <a href="https://d1.awsstatic.com/events/reinvent/2021/Lumos_Amazons_internal_largescale_serverless_payments_system_AMZ201.pdf" target="_blank">AWS&nbsp;re:Invent&nbsp;2021</a>, <a href="https://aws.amazon.com/blogs/industries/how-amazon-built-a-highly-scalable-and-secure-tokenization-solution-on-aws/" target="_blank">AWS&nbsp;Blog</a></p>
+                    </div>
+                </article>
+            </section>
+            <hr/>
+            <section>
+                <h2>Education</h2>
+                <article>
+                    <header>
+                        <h3 class="display-inline">Cornell University</h3>
+                        <p class="display-inline"><a href="https://www.cornell.edu/" target="_blank">cornell.edu</a></p>
+                    </header>
+                    <div class="margin-top-32">
+                        <h4>Bachelor, Computer Science</h4>
+                        <h5>Ithaca,&nbsp;NY&nbsp;• Dec&nbsp;2021</h5>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <h5>Charles C. Lu</h5>
+            <div>
+                <p class="display-inline"><a class="color-i-fg-color" href="https://www.linkedin.com/in/lucharlesc/" target="_blank">LinkedIn</a></p>
+                <p class="display-inline"><a class="color-i-fg-color" href="https://github.com/lucharlesc" target="_blank">GitHub</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
