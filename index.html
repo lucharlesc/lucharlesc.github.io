@@ -30,6 +30,13 @@
                 line-height: 24px;
                 color: var(--fg-color-0);
             }
+            header {
+                padding: 32px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 32px;
+            }
             main {
                 padding: 0 32px;
                 border-top: 2px solid var(--bg-color-1);
@@ -42,6 +49,10 @@
                 gap: 24px;
                 background-color: var(--i-bg-color);
             }
+            img {
+                border: 2px solid var(--bg-color-1);
+                border-radius: 50%;
+            }
             section {
                 padding: 32px 0;
             }
@@ -53,7 +64,6 @@
                 margin-top: 32px;
             }
             h1 {
-                padding: 32px;
                 font-size: 48px;
                 line-height: 64px;
             }
@@ -98,16 +108,17 @@
     </head>
     <body>
         <header>
+            <img height="128" width="128" src="portrait.png" alt=""/>
             <h1>Charles C. Lu</h1>
         </header>
         <main>
             <section>
                 <h2>Experience</h2>
                 <article>
-                    <header>
+                    <hgroup>
                         <h3 class="display-inline">Amazon</h3>
                         <p class="display-inline"><a href="https://www.amazon.com/" target="_blank">amazon.com</a></p>
-                    </header>
+                    </hgroup>
                     <div class="margin-top-32">
                         <h4>Software Development Engineer II, Payments</h4>
                         <h5>Seattle,&nbsp;WA&nbsp;• Jul&nbsp;2023&nbsp;- Present</h5>
@@ -122,10 +133,10 @@
             <section>
                 <h2>Education</h2>
                 <article>
-                    <header>
+                    <hgroup>
                         <h3 class="display-inline">Cornell University</h3>
                         <p class="display-inline"><a href="https://www.cornell.edu/" target="_blank">cornell.edu</a></p>
-                    </header>
+                    </hgroup>
                     <div class="margin-top-32">
                         <h4>Bachelor, Computer Science</h4>
                         <h5>Ithaca,&nbsp;NY&nbsp;• Dec&nbsp;2021</h5>
