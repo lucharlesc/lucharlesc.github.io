@@ -5,6 +5,18 @@
         <title>Charles C. Lu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <style>
+            @font-face {
+                font-family: "Space Mono";
+                font-weight: normal;
+                font-display: block;
+                src: url("font.woff2") format("woff2")
+            }
+            @font-face {
+                font-family: "Space Mono";
+                font-weight: bold;
+                font-display: block;
+                src: url("bold_font.woff2") format("woff2")
+            }
             :root {
                 --bg-color-0: #FFFFFF;
                 --bg-color-1: #F2F2F2;
@@ -25,7 +37,7 @@
                 margin: auto;
                 max-width: 1024px;
                 background-color: var(--bg-color-0);
-                font-family: monospace, sans-serif;
+                font-family: "Space Mono", monospace, sans-serif;
                 font-size: 16px;
                 line-height: 24px;
                 color: var(--fg-color-0);
