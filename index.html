@@ -59,7 +59,6 @@
                 gap: 32px;
             }
             main {
-                padding: 0 32px;
                 border-top: 2px solid var(--bg-color-1);
             }
             footer {
@@ -71,8 +70,7 @@
                 background-color: var(--i-bg-color);
             }
             img {
-                border: 2px solid var(--bg-color-1);
-                border-radius: 50%;
+                background-color: var(--bg-color-1);
             }
             section {
                 padding: 32px 0;
@@ -106,20 +104,68 @@
                 line-height: 24px;
                 color: var(--fg-color-1);
             }
+            h6 {
+                font-size: 14px;
+                line-height: 24px;
+            }
             a {
                 color: var(--hl-color);
+            }
+            #portrait {
+                border: 2px solid var(--bg-color-1);
+                border-radius: 50%;
+            }
+            .media-links {
+                display: flex;
+                column-gap: 16px;
+                overflow-x: scroll;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .media-links::-webkit-scrollbar {
+                display: none;
+            }
+            .media-link {
+                width: 256px;
+                flex-shrink: 0;
+                display: flex;
+                flex-direction: column;
+                border: 2px solid var(--bg-color-1);
+                border-radius: 16px;
+                overflow: hidden;
             }
             .margin-top-32 {
                 margin-top: 32px;
             }
+            .margin-top-16 {
+                margin-top: 16px;
+            }
             .margin-top-8 {
                 margin-top: 8px;
+            }
+            .padding-0-32 {
+                padding: 0 32px;
+            }
+            .padding-16 {
+                padding: 16px;
             }
             .display-inline {
                 display: inline;
             }
+            .color-fg-color-0 {
+                color: var(--fg-color-0);
+            }
             .color-i-fg-color {
                 color: var(--i-fg-color);
+            }
+            .object-fit-cover {
+                object-fit: cover;
+            }
+            .hover-underline {
+                text-decoration: none;
+            }
+            .hover-underline:hover {
+                text-decoration: underline;
             }
             ::selection {
                 color: var(--i-fg-color);
@@ -129,31 +175,48 @@
     </head>
     <body>
         <header>
-            <img height="128" width="128" src="portrait.png" alt=""/>
+            <img id="portrait" height="128" width="128" src="portrait.png" alt="" onerror="this.style.display='none'"/>
             <h1>Charles C. Lu</h1>
         </header>
         <main>
             <section>
-                <h2>Experience</h2>
+                <h2 class="padding-0-32">Experience</h2>
                 <article>
-                    <hgroup>
+                    <hgroup class="padding-0-32">
                         <h3 class="display-inline">Amazon</h3>
                         <p class="display-inline"><a href="https://www.amazon.com/" target="_blank">amazon.com</a></p>
                     </hgroup>
                     <div class="margin-top-32">
-                        <h4>Software Development Engineer II, Payments</h4>
-                        <h5>Seattle,&nbsp;WA&nbsp;• Jul&nbsp;2023&nbsp;- Present</h5>
-                        <h4>Software Development Engineer I, Payments</h4>
-                        <h5>Seattle,&nbsp;WA&nbsp;• Feb&nbsp;2022&nbsp;- Jun&nbsp;2023</h5>
-                        <p class="margin-top-8">Payment processing of $2+ billion per day with 200+ payment processors globally across all payments on <a href="https://www.amazon.com/" target="_blank">Amazon</a>, <a href="https://aws.amazon.com/" target="_blank">AWS</a>, <a href="https://www.twitch.tv/" target="_blank">Twitch</a>, at <a href="https://www.wholefoodsmarket.com/" target="_blank">Whole&nbsp;Foods</a>, and more.</p>
-                        <p class="margin-top-8">Media: <a href="https://d1.awsstatic.com/events/reinvent/2021/Lumos_Amazons_internal_largescale_serverless_payments_system_AMZ201.pdf" target="_blank">AWS&nbsp;re:Invent&nbsp;2021</a>, <a href="https://aws.amazon.com/blogs/industries/how-amazon-built-a-highly-scalable-and-secure-tokenization-solution-on-aws/" target="_blank">AWS&nbsp;Blog</a></p>
+                        <div class="padding-0-32">
+                            <h4>Software Development Engineer II, Payments</h4>
+                            <h5>Seattle,&nbsp;WA&nbsp;• Jul&nbsp;2023&nbsp;- Present</h5>
+                            <h4>Software Development Engineer I, Payments</h4>
+                            <h5>Seattle,&nbsp;WA&nbsp;• Feb&nbsp;2022&nbsp;- Jun&nbsp;2023</h5>
+                            <p class="margin-top-8">Payment processing of $2+ billion per day with 200+ payment processors globally across all payments on <a href="https://www.amazon.com/" target="_blank">Amazon</a>, <a href="https://aws.amazon.com/" target="_blank">AWS</a>, <a href="https://www.twitch.tv/" target="_blank">Twitch</a>, at <a href="https://www.wholefoodsmarket.com/" target="_blank">Whole&nbsp;Foods</a>, and more.</p>
+                        </div>
+                        <div class="media-links margin-top-16 padding-0-32">
+                            <a class="media-link color-fg-color-0 hover-underline" href="https://d1.awsstatic.com/events/reinvent/2021/Lumos_Amazons_internal_largescale_serverless_payments_system_AMZ201.pdf" target="_blank">
+                                <img class="object-fit-cover" height="144" width="256" src="aws_reinvent_lumos.png" alt="" onerror="this.style.display='none'"/>
+                                <div class="padding-16">
+                                    <h6>AWS re:Invent</h6>
+                                    <p>Lumos: Amazon's internal, large-scale serverless payments system</p>
+                                </div>
+                            </a>
+                            <a class="media-link color-fg-color-0 hover-underline" href="https://aws.amazon.com/blogs/industries/how-amazon-built-a-highly-scalable-and-secure-tokenization-solution-on-aws/" target="_blank">
+                                <img class="object-fit-cover" height="144" width="256" src="aws_blog_lumos.png" alt="" onerror="this.style.display='none'"/>
+                                <div class="padding-16">
+                                    <h6>AWS Blog</h6>
+                                    <p>How Amazon built a highly scalable and secure tokenization solution on AWS</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </article>
             </section>
             <hr/>
             <section>
-                <h2>Education</h2>
-                <article>
+                <h2 class="padding-0-32">Education</h2>
+                <article class="padding-0-32">
                     <hgroup>
                         <h3 class="display-inline">Cornell University</h3>
                         <p class="display-inline"><a href="https://www.cornell.edu/" target="_blank">cornell.edu</a></p>
