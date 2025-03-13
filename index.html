@@ -24,15 +24,15 @@
                 --fg-color-1: #808080;
                 --i-bg-color: #333333;
                 --i-fg-color: #FFFFFF;
-                --hl-color: #0C68F4;
+                --hl-color: #1998FF;
             }
             @media (prefers-color-scheme: dark) {
                 :root {
                     --bg-color-0: #333333;
                     --bg-color-1: #262626;
-                    --fg-color-0: #CCCCCC;
+                    --fg-color-0: #E6E6E6;
                     --i-bg-color: #1A1A1A;
-                    --i-fg-color: #CCCCCC;
+                    --i-fg-color: #E6E6E6;
                 }
             }
             * {
@@ -57,9 +57,6 @@
                 flex-wrap: wrap;
                 align-items: center;
                 gap: 32px;
-            }
-            main {
-                border-top: 2px solid var(--bg-color-1);
             }
             footer {
                 padding: 32px 32px 256px 32px;
@@ -103,10 +100,6 @@
                 font-weight: normal;
                 line-height: 24px;
                 color: var(--fg-color-1);
-            }
-            h6 {
-                font-size: 14px;
-                line-height: 24px;
             }
             a {
                 color: var(--hl-color);
@@ -164,7 +157,7 @@
             .hover-underline {
                 text-decoration: none;
             }
-            .hover-underline:hover {
+            .hover-underline:hover .hover-underline-target {
                 text-decoration: underline;
             }
             ::selection {
@@ -178,6 +171,7 @@
             <img id="portrait" height="128" width="128" src="portrait.png" alt="" onerror="this.style.display='none'"/>
             <h1>Charles C. Lu</h1>
         </header>
+        <hr/>
         <main>
             <section>
                 <h2 class="padding-0-32">Experience</h2>
@@ -198,15 +192,15 @@
                             <a class="media-link color-fg-color-0 hover-underline" href="https://d1.awsstatic.com/events/reinvent/2021/Lumos_Amazons_internal_largescale_serverless_payments_system_AMZ201.pdf" target="_blank">
                                 <img class="object-fit-cover" height="144" width="256" src="aws_reinvent_lumos.png" alt="" onerror="this.style.display='none'"/>
                                 <div class="padding-16">
-                                    <h6>AWS re:Invent</h6>
-                                    <p>Lumos: Amazon's internal, large-scale serverless payments system</p>
+                                    <h5>AWS re:Invent</h5>
+                                    <p class="hover-underline-target">Lumos: Amazon's internal, large-scale serverless payments system</p>
                                 </div>
                             </a>
                             <a class="media-link color-fg-color-0 hover-underline" href="https://aws.amazon.com/blogs/industries/how-amazon-built-a-highly-scalable-and-secure-tokenization-solution-on-aws/" target="_blank">
                                 <img class="object-fit-cover" height="144" width="256" src="aws_blog_lumos.png" alt="" onerror="this.style.display='none'"/>
                                 <div class="padding-16">
-                                    <h6>AWS Blog</h6>
-                                    <p>How Amazon built a highly scalable and secure tokenization solution on AWS</p>
+                                    <h5>AWS Blog</h5>
+                                    <p class="hover-underline-target">How Amazon built a highly scalable and secure tokenization solution on AWS</p>
                                 </div>
                             </a>
                         </div>
