@@ -54,9 +54,8 @@
             header {
                 padding: 32px;
                 display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                gap: 32px;
+                justify-content: space-between;
+                gap: 16px;
             }
             footer {
                 padding: 32px 32px 256px 32px;
@@ -67,6 +66,7 @@
                 background-color: var(--i-bg-color);
             }
             img {
+                display: block;
                 background-color: var(--bg-color-1);
             }
             section {
@@ -80,16 +80,18 @@
                 margin-top: 32px;
             }
             h1 {
-                font-size: 48px;
-                line-height: 64px;
+                font-size: 32px;
+                line-height: 40px;
             }
             h2 {
-                font-size: 32px;
-                line-height: 48px;
+                font-size: 28px;
+                font-weight: normal;
+                line-height: 40px;
+                color: var(--fg-color-1);
             }
             h3 {
                 font-size: 24px;
-                line-height: 36px;
+                line-height: 32px;
             }
             h4 {
                 font-size: 16px;
@@ -102,7 +104,7 @@
                 color: var(--fg-color-1);
             }
             a {
-                color: var(--hl-color);
+                color: var(--fg-color-0);
             }
             #portrait {
                 border: 2px solid var(--bg-color-1);
@@ -121,8 +123,6 @@
             .media-link {
                 width: 256px;
                 flex-shrink: 0;
-                display: flex;
-                flex-direction: column;
                 border: 2px solid var(--bg-color-1);
                 border-radius: 16px;
                 overflow: hidden;
@@ -148,6 +148,9 @@
             .color-fg-color-0 {
                 color: var(--fg-color-0);
             }
+            .color-fg-color-1 {
+                color: var(--fg-color-1);
+            }
             .color-i-fg-color {
                 color: var(--i-fg-color);
             }
@@ -164,12 +167,18 @@
                 color: var(--i-fg-color);
                 background-color: var(--hl-color);
             }
+            @media (max-width: 512px) {
+                #portrait {
+                    height: 64px;
+                    width: 64px;
+                }
+            }
         </style>
     </head>
     <body>
         <header>
-            <img id="portrait" height="128" width="128" src="portrait.png" alt="" onerror="this.style.display='none'"/>
             <h1>Charles C. Lu</h1>
+            <img id="portrait" height="128" width="128" src="portrait.png" alt="" onerror="this.style.display='none'"/>
         </header>
         <hr/>
         <main>
@@ -178,7 +187,7 @@
                 <article>
                     <hgroup class="padding-0-32">
                         <h3 class="display-inline">Amazon</h3>
-                        <p class="display-inline"><a href="https://www.amazon.com/" target="_blank">amazon.com</a></p>
+                        <p class="display-inline"><a class="color-fg-color-1" href="https://www.amazon.com/" target="_blank">amazon.com</a></p>
                     </hgroup>
                     <div class="margin-top-32">
                         <div class="padding-0-32">
@@ -213,7 +222,7 @@
                 <article class="padding-0-32">
                     <hgroup>
                         <h3 class="display-inline">Cornell University</h3>
-                        <p class="display-inline"><a href="https://www.cornell.edu/" target="_blank">cornell.edu</a></p>
+                        <p class="display-inline"><a class="color-fg-color-1" href="https://www.cornell.edu/" target="_blank">cornell.edu</a></p>
                     </hgroup>
                     <div class="margin-top-32">
                         <h4>Bachelor, Computer Science</h4>
@@ -225,8 +234,8 @@
         <footer>
             <h5>Charles C. Lu</h5>
             <div>
-                <p class="display-inline"><a class="color-i-fg-color" href="https://www.linkedin.com/in/lucharlesc/" target="_blank">LinkedIn</a></p>
-                <p class="display-inline"><a class="color-i-fg-color" href="https://github.com/lucharlesc" target="_blank">GitHub</a></p>
+                <a class="color-i-fg-color" href="https://www.linkedin.com/in/lucharlesc/" target="_blank">LinkedIn</a>
+                <a class="color-i-fg-color" href="https://github.com/lucharlesc" target="_blank">GitHub</a>
             </div>
         </footer>
     </body>
