@@ -25,6 +25,10 @@
                 --i-bg-color: #333333;
                 --i-fg-color: #FFFFFF;
                 --hl-color: #1998FF;
+                --az-color-0: #FF6201;
+                --az-color-1: #FFB080;
+                --cn-color-0: #B31B1B;
+                --cn-color-1: #D98D8D;
             }
             @media (prefers-color-scheme: dark) {
                 :root {
@@ -33,6 +37,8 @@
                     --fg-color-0: #E6E6E6;
                     --i-bg-color: #1A1A1A;
                     --i-fg-color: #E6E6E6;
+                    --az-color-1: #803101;
+                    --cn-color-1: #671B1B;
                 }
             }
             * {
@@ -79,6 +85,10 @@
             article {
                 margin-top: 16px;
             }
+            hgroup {
+                border-left: 8px solid;
+                padding: 0 32px 0 24px;
+            }
             h1 {
                 font-size: 24px;
                 line-height: 32px;
@@ -110,7 +120,12 @@
                 border: 2px solid var(--bg-color-1);
                 border-radius: 50%;
             }
+            .block {
+                margin-top: 8px;
+                border-left: 4px solid;
+            }
             .media-links {
+                margin-top: 16px;
                 display: flex;
                 column-gap: 16px;
                 overflow-x: scroll;
@@ -121,17 +136,29 @@
                 display: none;
             }
             .media-link {
-                width: 256px;
-                flex-shrink: 0;
                 border: 2px solid var(--bg-color-1);
                 border-radius: 16px;
+                width: 256px;
+                flex-shrink: 0;
                 overflow: hidden;
-            }
-            .margin-top-16 {
-                margin-top: 16px;
             }
             .margin-top-8 {
                 margin-top: 8px;
+            }
+            .border-color-az-color-0 {
+                border-color: var(--az-color-0);
+            }
+            .border-color-az-color-1 {
+                border-color: var(--az-color-1);
+            }
+            .border-color-cn-color-0 {
+                border-color: var(--cn-color-0);
+            }
+            .border-color-cn-color-1 {
+                border-color: var(--cn-color-1);
+            }
+            .padding-0-32-0-28 {
+                padding: 0 32px 0 28px;
             }
             .padding-0-32 {
                 padding: 0 32px;
@@ -150,9 +177,6 @@
             }
             .color-i-fg-color {
                 color: var(--i-fg-color);
-            }
-            .object-fit-cover {
-                object-fit: cover;
             }
             .hover-underline {
                 text-decoration: none;
@@ -190,28 +214,28 @@
             <section>
                 <h2 class="padding-0-32">Experience</h2>
                 <article>
-                    <hgroup class="padding-0-32">
+                    <hgroup class="border-color-az-color-0">
                         <h3 class="display-inline">Amazon</h3>
                         <p class="display-inline"><a class="color-fg-color-1" href="https://www.amazon.com/" target="_blank">amazon.com</a></p>
                     </hgroup>
-                    <div class="margin-top-8">
-                        <div class="padding-0-32">
+                    <div class="block border-color-az-color-1">
+                        <div class="padding-0-32-0-28">
                             <h4>Software Development Engineer II, Payments</h4>
                             <h5>Seattle,&nbsp;WA&nbsp;• Jul&nbsp;2023&nbsp;- Present</h5>
                             <h4>Software Development Engineer I, Payments</h4>
                             <h5>Seattle,&nbsp;WA&nbsp;• Feb&nbsp;2022&nbsp;- Jun&nbsp;2023</h5>
                             <p class="margin-top-8">Payment processing of $2+ billion per day with 200+ payment processors globally across all payments on <a href="https://www.amazon.com/" target="_blank">Amazon</a>, <a href="https://aws.amazon.com/" target="_blank">AWS</a>, <a href="https://www.twitch.tv/" target="_blank">Twitch</a>, at <a href="https://www.wholefoodsmarket.com/" target="_blank">Whole&nbsp;Foods</a>, and more.</p>
                         </div>
-                        <div class="media-links margin-top-16 padding-0-32">
+                        <div class="media-links padding-0-32-0-28">
                             <a class="media-link color-fg-color-0 hover-underline" href="https://d1.awsstatic.com/events/reinvent/2021/Lumos_Amazons_internal_largescale_serverless_payments_system_AMZ201.pdf" target="_blank">
-                                <img class="object-fit-cover" height="144" width="256" src="aws_reinvent_lumos.png" alt="" onerror="this.style.display='none'"/>
+                                <img height="144" width="256" src="aws_reinvent_lumos.png" alt="" onerror="this.style.display='none'"/>
                                 <div class="padding-12-16">
                                     <h5>AWS re:Invent</h5>
                                     <p class="hover-underline-target">Lumos: Amazon's internal, large-scale serverless payments system</p>
                                 </div>
                             </a>
                             <a class="media-link color-fg-color-0 hover-underline" href="https://aws.amazon.com/blogs/industries/how-amazon-built-a-highly-scalable-and-secure-tokenization-solution-on-aws/" target="_blank">
-                                <img class="object-fit-cover" height="144" width="256" src="aws_blog_lumos.png" alt="" onerror="this.style.display='none'"/>
+                                <img height="144" width="256" src="aws_blog_lumos.png" alt="" onerror="this.style.display='none'"/>
                                 <div class="padding-12-16">
                                     <h5>AWS Blog</h5>
                                     <p class="hover-underline-target">How Amazon built a highly scalable and secure tokenization solution on AWS</p>
@@ -224,12 +248,12 @@
             <hr/>
             <section>
                 <h2 class="padding-0-32">Education</h2>
-                <article class="padding-0-32">
-                    <hgroup>
+                <article>
+                    <hgroup class="border-color-cn-color-0">
                         <h3 class="display-inline">Cornell University</h3>
                         <p class="display-inline"><a class="color-fg-color-1" href="https://www.cornell.edu/" target="_blank">cornell.edu</a></p>
                     </hgroup>
-                    <div class="margin-top-8">
+                    <div class="block border-color-cn-color-1 padding-0-32-0-28">
                         <h4>Bachelor, Computer Science</h4>
                         <h5>Ithaca,&nbsp;NY&nbsp;• Dec&nbsp;2021</h5>
                     </div>
